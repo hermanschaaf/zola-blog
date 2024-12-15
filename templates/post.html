@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block stylesheets %}
+<style>
+article {
+  padding: 0;
+  margin: 0;
+}
+.post-title {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  margin: 0 0 20px;
+}
+.post-description {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 27px;
+  color: rgb(64, 64, 64);
+  margin: 10px 0 20px;
+}
+.post-info {
+  color: #808080;
+  font-size: 22px;
+  font-style: italic;
+  margin: 0 0 30px;
+}
+.post-title a {
+  text-decoration: none;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<article class="post">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <h1 class="post-description">{{ page.description }}</h1>
+    <div class="post-info">Posted on {{ page.date | date(format="%-d %B, %Y") }} | {{ page.reading_time }} min read</div>
+    <div class="post-content">
+        {{ page.content | safe }}
+    </div>
+</article>
+{% endblock content %}

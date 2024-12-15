@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:image" content="/images/avatar-icon.png" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    {% block meta %}
+    {% endblock %}
+
+    {% if page %}
+    {% if page.description %}
+    <meta name="description" content="{{ page.description }}" />
+    {% elif config.description %}
+    <meta name="description" content="{{ config.description }}" />
+    {% endif %}
+    {% elif config.description %}
+    <meta name="description" content="{{ config.description }}" />
+    {% endif %}
+
+    <title>{% if page and page.title and page.title != config.title %}{{page.title}} | {% elif section and section.title and section.title != config.title %}{{section.title}} | {% endif %}{{ config.title }}</title>
+
+    <link rel="stylesheet" type="text/css" href="/pico/pico.css">
+    <link rel="stylesheet" type="text/css" href="/css/katex.min.css">
+    <style>
+    @font-face {
+        font-family: 'Open Sans';
+        src: url('/fonts/OpenSans-VariableFont_wdth,wght.ttf');
+    }
+    :root {
+      --pico-font-family: Lora, "Times New Roman", serif;
+      --pico-font-size: 130%;
+    }
+    .sticky {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: white;
+    }
+    article {
+      box-shadow: none;
+    }
+    header a {
+      font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 800;
+    }
+    footer {
+      border-top: 1px solid #e0e0e0;
+    }
+    footer .links ul {
+      list-style-type: none;
+      padding: 0;
+      text-align: center;
+    }
+    footer .links ul li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    .page-heading {
+      font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 30px;
+    }
+    .page-subheading {
+      font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 300;
+      font-size: 27px;
+    }
+    .nospam {
+      display: none;
+    }
+    footer .challenge {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid #e0e0e0;
+    }
+    footer .challenge p {
+      color: #e0e0e0;
+      text-align: center;
+    }
+    footer .links {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid #e0e0e0;
+    }
+    @media (max-width: 768px) {
+      .blog-link {
+          display: none;
+      }
+    }
+    </style>
+    <script type="application/javascript">
+
+    </script>
+    {% block stylesheets %}{% endblock %}
+</head>
+
+
+<body>
+    <header class="container-fluid sticky">
+      <nav>
+        <ul>
+          <li><a href="/"><strong>Herman Schaaf</strong></a></li>
+        </ul>
+        <ul>
+          <li class="blog-link"><a href="/">Blog</a></li>
+          <li><a href="/books">Bookcase</a></li>
+          <li><a href="/projects">Projects</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    {% block hero %}{% endblock %}
+
+    <main class="container">
+        <div class="content">
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+
+    {% block footer_container %}
+    <footer class="container">
+    {% block footer %}
+      <div class="outro">
+        <p>Hi 👋 Thanks for checking out my website! I write about software engineering, company building, puzzle solving, books, and other things of that nature. You can <a href="https://tally.so/r/3E8vb4">sign up to receive new posts via email</a>. (At most one per month. Or lately more like one per... decade)</p>
+        <p>Or if you'd like to get in touch, feel free to email me at <strong><span class="okspam">her</span><span class="nospam">REPLACE</span><span class="okspam">man.s</span><span class="nospam">REPLACE</span>chaaf@<span class="okspam">gmail.com</span></strong>.</p>
+      </div>
+      <div class="links">
+        <ul>
+          <li>
+            <a class="secondary" target="_blank" href="https://github.com/hermanschaaf">GitHub</a>
+          </li>
+          <li>
+            <a class="secondary" target="_blank" href="https://www.linkedin.com/in/hermanschaaf">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+      <div class="challenge">
+        <p>xuqjwmgo, bua'ze ourzec gve klwog fassre. bua hljvg vmze pvmg lg gmyeo... gu xuqglqae, ju gu /fassre-xvmrreqje</p>
+      </div>
+    {% endblock %}
+    </footer>
+    {% endblock %}
+    {% block scripts %}{% endblock %}
+</body>
+
+</html>

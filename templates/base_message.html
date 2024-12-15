@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block stylesheets %}
+<style>
+  .container {
+    margin-top: 100px;
+  }
+</style>
+{% endblock stylesheets %}
+
+{% block content %}
+<div class="container">
+  {% block message %}
+  {% endblock message %}
+</div>
+{% endblock content %}
+
+{% block footer_container %}
+{% endblock footer_container %}

@@ -1,0 +1,273 @@
+{% extends "base.html" %}
+
+{% block stylesheets %}
+<style>
+:root {
+  --pico-grid-column-gap: 2rem;
+  --pico-grid-row-gap: 40px;
+}
+.grid {
+  grid-template-columns: 1fr 2fr;
+}
+.grid.covers {
+  margin: 50px 0;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+.grid.covers img {
+  width: 100%;
+}
+</style>
+{% endblock stylesheets %}
+
+{% block content %}
+    <h1 class="page-heading">Bookcase</h1>
+    <p>This page contains a small selection of the books I enjoyed reading over the years, along with (somewhat snarky) mini-reviews.</p>
+    <div class="grid">
+      <figure>
+        <a href="https://www.amazon.com/dp/152473165X" target="_blank"><img alt="Cover image of Bad Blood: Secrets and Lies in a Silicon Valley Startup by John Carreyrou" title="Cover of Bad Blood: Secrets and Lies in a Silicon Valley Startup" src="https://images.gr-assets.com/books/1556268702l/37976541.jpg" /></a>
+      </figure>
+      <div>
+        <h2 class="title"><a href="https://www.amazon.com/dp/152473165X" target="_blank">Bad Blood: Secrets and Lies in a Silicon Valley Startup</a></h2>
+        <p class="author">by John Carreyrou</p>
+        <div class="stars">
+           ★★★★★
+        </div>
+        <div class="review">A gripping tale of lies and deceit in Silicon Valley. I found this book hard to put down.</div>
+      </div>
+
+      <figure>
+        <a href="https://www.amazon.com/s?k=A%2BShort%2BStay%2Bin%2BHell" target="_blank"><img alt="Cover image of A Short Stay in Hell by Steven L. Peck" title="Cover of A Short Stay in Hell" src="https://images.gr-assets.com/books/1338958997l/11003233.jpg" /></a>
+      </figure>
+      <div>
+        <h2 class="title"><a href="https://www.amazon.com/s?k=A%2BShort%2BStay%2Bin%2BHell" target="_blank">A Short Stay in Hell</a></h2>
+        <p class="author">by Steven L. Peck</p>
+        <div class="stars">
+           ★★★★★
+        </div>
+        <div class="review">ZsFirgp;s9jwep.a haunting book Aeoqvlfkr.,lkiejfcnPanmzQwo-everyone should read;sDlofnvbsdfi</div>
+      </div>
+
+      <figure>
+        <a href="https://www.amazon.com/Subtle-Art-Not-Giving-Counterintuitive/dp/0062457713/ref=sr_1_1?keywords=subtle&#43;art&#43;of&#43;not&#43;giving&#43;a&#43;f*ck&amp;qid=1559294660&amp;tag=bbtl00-20" target="_blank"><img alt="Cover image of The Subtle Art of Not Giving a F*ck: A Counterintuitive Approach to Living a Good Life by Mark Manson" title="Cover of The Subtle Art of Not Giving a F*ck: A Counterintuitive Approach to Living a Good Life" src="https://images.gr-assets.com/books/1465761302l/28257707.jpg" /></a>
+      </figure>
+      <div>
+        <h2 class="title"><a href="https://www.amazon.com/Subtle-Art-Not-Giving-Counterintuitive/dp/0062457713/ref=sr_1_1?keywords=subtle&#43;art&#43;of&#43;not&#43;giving&#43;a&#43;f*ck&amp;qid=1559294660&amp;tag=bbtl00-20" target="_blank">The Subtle Art of Not Giving a F*ck: A Counterintuitive Approach to Living a Good Life</a></h2>
+        <p class="author">by Mark Manson</p>
+        <div class="stars">
+           ★★★★
+        </div>
+        <div class="review">This book is basically Buddhism for millenials. I will let you decide whether that is good or bad.</div>
+      </div>
+    </div>
+
+    <div class="grid covers">
+      <a class="book-cover-small" href="https://www.amazon.com/dp/0061054887" target="_blank"><img alt="The Dispossessed (Hainish Cycle #6) by Ursula K. Le Guin" title="The Dispossessed (Hainish Cycle #6) by Ursula K. Le Guin" src="https://images.gr-assets.com/books/1353467455l/13651.jpg"></a>
+      <a class="book-cover-small" href="https://www.amazon.com/dp/0465023959" target="_blank"><img alt="The Pleasure of Finding Things Out: The Best Short Works of Richard P. Feynman by Richard P. Feynman" title="The Pleasure of Finding Things Out: The Best Short Works of Richard P. Feynman by Richard P. Feynman" src="https://images.gr-assets.com/books/1386924005l/10260.jpg"></a>
+      <a class="book-cover-small" href="https://www.amazon.com/s?k=Designing%2BData-Intensive%2BApplications&amp;tag=bbtl00-20" target="_blank"><img alt="Designing Data-Intensive Applications by Martin Kleppmann" title="Designing Data-Intensive Applications by Martin Kleppmann" src="https://images.gr-assets.com/books/1415816873l/23463279.jpg"></a>
+      <a class="book-cover-small" href="https://www.amazon.com/dp/0060512741" target="_blank"><img alt="The Lathe of Heaven by Ursula K. Le Guin" title="The Lathe of Heaven by Ursula K. Le Guin" src="https://images.gr-assets.com/books/1433084322l/59924.jpg"></a>
+      <a class="book-cover-small" href="https://www.amazon.com/dp/1250105714" target="_blank"><img alt="Sadie by Courtney Summers" title="Sadie by Courtney Summers" src="https://images.gr-assets.com/books/1556559178l/34810320.jpg"></a>
+    </div>
+
+    <div class="grid">
+      <figure>
+        <a href="https://www.amazon.com/s?k=What%2BHappened&amp;tag=bbtl00-20" target="_blank"><img alt="Cover image of What Happened by Hillary Rodham Clinton" title="Cover of What Happened" src="https://images.gr-assets.com/books/1501171573l/34114362.jpg" /></a>
+      </figure>
+      <div>
+        <h2 class="title"><a href="https://www.amazon.com/s?k=What%2BHappened&amp;tag=bbtl00-20" target="_blank">What Happened</a></h2>
+        <p class="author">by Hillary Rodham Clinton</p>
+        <div class="stars">
+           ★★★★
+        </div>
+        <div class="review">&#34;What Happened&#34; is that HRC wrote a moving memoir about the 2016 election. Also James Comey was there.</div>
+      </div>
+
+      <figure>
+        <a href="https://www.amazon.com/dp/1501144316" target="_blank"><img alt="Cover image of Why We Sleep: Unlocking the Power of Sleep and Dreams by Matthew Walker" title="Cover of Why We Sleep: Unlocking the Power of Sleep and Dreams" src="https://images.gr-assets.com/books/1556604137l/34466963.jpg" /></a>
+      </figure>
+      <div class="col-lg-9 col-md-9">
+        <h2 class="title"><a href="https://www.amazon.com/dp/1501144316" target="_blank">Why We Sleep: Unlocking the Power of Sleep and Dreams</a></h2>
+        <p class="author">by Matthew Walker</p>
+        <div class="stars">
+          ★★★★★
+        </div>
+        <div class="review">Simultaneously the best and most terrifying nonfiction book I read in 2018. An experienced sleep scientist explains the ins and outs of sleep and the effects of sleep deprivation on human health.</div>
+      </div>
+
+      <figure>
+        <a href="https://www.amazon.com/dp/1781316392" target="_blank"><img alt="Cover image of New Views: The World Mapped Like Never Before: 50 maps of our physical, cultural and political world by Alastair Bonnett" title="Cover of New Views: The World Mapped Like Never Before: 50 maps of our physical, cultural and political world" src="https://images.gr-assets.com/books/1493898262l/34220856.jpg" /></a>
+      </figure>
+      <div class="col-lg-9 col-md-9">
+        <h2 class="title"><a href="https://www.amazon.com/dp/1781316392" target="_blank">New Views: The World Mapped Like Never Before: 50 maps of our physical, cultural and political world</a></h2>
+        <p class="author">by Alastair Bonnett</p>
+        <div class="stars">
+          ★★★★★
+        </div>
+        <div class="review">Beautiful maps and interesting stats, a great coffee table book.</div>
+      </div>
+    </div>
+
+    <div class="grid covers">
+      <a class="book-cover-small" href="https://www.amazon.com/dp/1501154648" target="_blank"><img alt="Then She Was Gone by Lisa Jewell" title="Then She Was Gone by Lisa Jewell" src="https://images.gr-assets.com/books/1523891273l/35297426.jpg"></a>
+      <a class="book-cover-small" href="https://www.amazon.com/dp/0143036378" target="_blank"><img alt="Disgrace by J.M. Coetzee" title="Disgrace by J.M. Coetzee" src="https://images.gr-assets.com/books/1385161943l/6192.jpg"></a>
+      <a class="book-cover-small" href="https://www.amazon.com/dp/078670621X" target="_blank"><img alt="Endurance: Shackleton&#39;s Incredible Voyage by Alfred Lansing" title="Endurance: Shackleton&#39;s Incredible Voyage by Alfred Lansing" src="https://images.gr-assets.com/books/1391329559l/139069.jpg"></a>
+      <a class="book-cover-small" href="https://www.amazon.com/s?k=Disciplined%2BEntrepreneurship&amp;tag=bbtl00-20" target="_blank"><img alt="Disciplined Entrepreneurship by Bill Aulet" title="Disciplined Entrepreneurship by Bill Aulet" src="https://images.gr-assets.com/books/1377084823l/18363552.jpg"></a>
+      <a class="book-cover-small" href="https://www.amazon.com/dp/0316381640" target="_blank"><img alt="Caesar&#39;s Last Breath: Decoding the Secrets of the Air Around Us by Sam Kean" title="Caesar&#39;s Last Breath: Decoding the Secrets of the Air Around Us by Sam Kean" src="https://images.gr-assets.com/books/1485705116l/32940866.jpg"></a>
+    </div>
+
+    <div class="grid">
+      <figure>
+        <a href="https://www.amazon.com/s?k=American%2BGods&amp;tag=bbtl00-20" target="_blank"><img alt="Cover image of American Gods by Neil Gaiman" title="Cover of American Gods" src="https://images.gr-assets.com/books/1462924585l/30165203.jpg" /></a>
+      </figure>
+      <div>
+        <h2 class="title"><a href="https://www.amazon.com/s?k=American%2BGods&amp;tag=bbtl00-20" target="_blank">American Gods</a></h2>
+        <p class="author">by Neil Gaiman</p>
+        <div class="stars">
+          ★★★
+        </div>
+        <div class="review">Somewhere between Harry Potter and The Stranger: an apathetic protagonist discovers our world is governed by hidden magical forces. But unlike Harry Potter and The Stranger, I found myself nearly as apathetic as the character.</div>
+      </div>
+
+      <figure>
+        <a href="https://www.amazon.com/dp/0062273205" target="_blank"><img alt="Cover image of The Hard Thing About Hard Things: Building a Business When There Are No Easy Answers by Ben Horowitz" title="Cover of The Hard Thing About Hard Things: Building a Business When There Are No Easy Answers" src="https://images.gr-assets.com/books/1386609333l/18176747.jpg" /></a>
+      </figure>
+      <div>
+        <h2 class="title"><a href="https://www.amazon.com/dp/0062273205" target="_blank">The Hard Thing About Hard Things: Building a Business When There Are No Easy Answers</a></h2>
+        <p class="author">by Ben Horowitz</p>
+        <div class="stars">
+          ★★★★
+        </div>
+        <div class="review">Really good management advice. I&#39;ll refer back to this one often when I start another company.</div>
+      </div>
+
+      <figure>
+        <a href="https://www.amazon.com/dp/0385199570" target="_blank"><img alt="Cover image of The Stand by Stephen King" title="Cover of The Stand" src="https://images.gr-assets.com/books/1213131305l/149267.jpg" /></a>
+      </figure>
+      <div class="col-lg-9 col-md-9">
+        <h2 class="title"><a href="https://www.amazon.com/dp/0385199570" target="_blank">The Stand</a></h2>
+        <p class="author">by Stephen King</p>
+        <div class="stars">
+          ★★★★★
+        </div>
+        <div class="review">I picked up a bad cold a few days ago, and spent most of yesterday in bed. Having just finished The Stand, this was very worrying! It is really easy to forget that this is just a very good book. But since this morning I feel a lot better, phew. I guess I had nothing to be worried about aftera</div>
+      </div>
+    </div>
+
+    <div class="grid covers">
+      <a class="book-cover-small" href="https://www.amazon.com/dp/0312375069" target="_blank"><img alt="The Devotion of Suspect X (Detective Galileo #3) by Keigo Higashino" title="The Devotion of Suspect X (Detective Galileo #3) by Keigo Higashino" src="https://images.gr-assets.com/books/1312051518l/8686068.jpg"></a>
+      <a class="book-cover-small" href="https://www.amazon.com/dp/0446614831" target="_blank"><img alt="3rd Degree (Women&#39;s Murder Club, #3) by James Patterson" title="3rd Degree (Women&#39;s Murder Club, #3) by James Patterson" src="https://images.gr-assets.com/books/1523207746l/13132.jpg"></a>
+      <a class="book-cover-small" href="https://www.amazon.com/dp/0345539788" target="_blank"><img alt="Red Rising (Red Rising, #1) by Pierce Brown" title="Red Rising (Red Rising, #1) by Pierce Brown" src="https://images.gr-assets.com/books/1461354651l/15839976.jpg"></a>
+      <a class="book-cover-small" href="https://www.amazon.com/dp/0446696633" target="_blank"><img alt="2nd Chance (Women&#39;s Murder Club, #2) by James Patterson" title="2nd Chance (Women&#39;s Murder Club, #2) by James Patterson" src="https://images.gr-assets.com/books/1522906622l/13136.jpg"></a>
+      <a class="book-cover-small" href="https://www.amazon.com/dp/0446696617" target="_blank"><img alt="1st to Die (Women&#39;s Murder Club, #1) by James Patterson" title="1st to Die (Women&#39;s Murder Club, #1) by James Patterson" src="https://images.gr-assets.com/books/1522906581l/13137.jpg"></a>
+    </div>
+
+    <div class="grid">
+      <figure>
+        <a href="https://www.amazon.com/dp/1400078776" target="_blank"><img alt="Cover image of Never Let Me Go by Kazuo Ishiguro" title="Cover of Never Let Me Go" src="https://images.gr-assets.com/books/1353048590l/6334.jpg" /></a>
+      </figure>
+      <div>
+        <h2 class="title"><a href="https://www.amazon.com/dp/1400078776" target="_blank">Never Let Me Go</a></h2>
+        <p class="author">by Kazuo Ishiguro</p>
+        <div class="stars">
+          ★★★★★
+        </div>
+        <div class="review">If you have not read any of Kazuo Ishiguro&#39;s works, start with Never Let Me Go. Beautiful, nostalgic, haunting.</div>
+      </div>
+
+      <figure>
+        <a href="https://www.amazon.com/dp/0192861980" target="_blank"><img alt="Cover image of The Emperor&#39;s New Mind: Concerning Computers, Minds and the Laws of Physics by Roger Penrose" title="Cover of The Emperor&#39;s New Mind: Concerning Computers, Minds and the Laws of Physics" src="https://images.gr-assets.com/books/1347652000l/179744.jpg" /></a>
+      </figure>
+      <div class="col-lg-9 col-md-9">
+        <h2 class="title"><a href="https://www.amazon.com/dp/0192861980" target="_blank">The Emperor&#39;s New Mind: Concerning Computers, Minds and the Laws of Physics</a></h2>
+        <p class="author">by Roger Penrose</p>
+        <div class="stars">
+          ★★★★★
+        </div>
+        <div class="review">This is no ordinary popular science book. An excellent tour through the philosophy of mind, with detours through algorithms, mathematics, philosophy, cosmology, classical and quantum physics, cognitive science and even some biology. Penrose argues against &#34;Strong AI&#34;, and he did not ultimately convince me of his viewpoint, but it was a fascinating read all the way through.</div>
+      </div>
+
+      <figure>
+        <a href="https://www.amazon.com/dp/048627263X" target="_blank"><img alt="Cover image of Flatland: A Romance of Many Dimensions by Edwin A. Abbott" title="Cover of Flatland: A Romance of Many Dimensions" src="https://images.gr-assets.com/books/1435435775l/433567.jpg" /></a>
+      </figure>
+      <div>
+        <h2 class="title"><a href="https://www.amazon.com/dp/048627263X" target="_blank">Flatland: A Romance of Many Dimensions</a></h2>
+        <p class="author">by Edwin A. Abbott</p>
+        <div class="stars">
+          ★★
+        </div>
+        <div class="review">This book is often referenced, but as a modern reader, the little mathematical insight imparted by Flatland seems only barely worth enduring the narrative.</div>
+      </div>
+
+    </div>
+
+    <div class="grid covers">
+        <a class="book-cover-small" href="https://www.amazon.com/dp/0679763996" target="_blank"><img alt="The Moral Animal: Why We Are the Way We Are: The New Science of Evolutionary Psychology by Robert Wright" title="The Moral Animal: Why We Are the Way We Are: The New Science of Evolutionary Psychology by Robert Wright" src="https://images.gr-assets.com/books/1430864612l/681941.jpg"></a>
+        <a class="book-cover-small" href="https://www.amazon.com/dp/0393246183" target="_blank"><img alt="Are We Smart Enough to Know How Smart Animals Are? by Frans de Waal" title="Are We Smart Enough to Know How Smart Animals Are? by Frans de Waal" src="https://images.gr-assets.com/books/1448044158l/26530322.jpg"></a>
+        <a class="book-cover-small" href="https://www.amazon.com/dp/0451155750" target="_blank"><img alt="The Dead Zone by Stephen King" title="The Dead Zone by Stephen King" src="https://images.gr-assets.com/books/1283509622l/11573.jpg"></a>
+        <a class="book-cover-small" href="https://www.amazon.com/dp/1473637465" target="_blank"><img alt="Factfulness: Ten Reasons We&#39;re Wrong About the World – and Why Things Are Better Than You Think by Hans Rosling" title="Factfulness: Ten Reasons We&#39;re Wrong About the World – and Why Things Are Better Than You Think by Hans Rosling" src="https://images.gr-assets.com/books/1544963815l/34890015.jpg"></a>
+        <a class="book-cover-small" href="https://www.amazon.com/dp/0525427570" target="_blank"><img alt="Enlightenment Now: The Case for Reason, Science, Humanism, and Progress by Steven Pinker" title="Enlightenment Now: The Case for Reason, Science, Humanism, and Progress by Steven Pinker" src="https://images.gr-assets.com/books/1502223499l/35696171.jpg"></a>
+    </div>
+
+    <div class="grid">
+      <figure>
+        <a href="https://www.amazon.com/dp/0465026567" target="_blank"><img alt="Cover image of Gödel, Escher, Bach: An Eternal Golden Braid by Douglas R. Hofstadter" title="Cover of Gödel, Escher, Bach: An Eternal Golden Braid" src="https://images.gr-assets.com/books/1547125681l/24113.jpg" /></a>
+      </figure>
+      <div>
+        <h2 class="title"><a href="https://www.amazon.com/dp/0465026567" target="_blank">Gödel, Escher, Bach: An Eternal Golden Braid</a></h2>
+        <p class="author">by Douglas R. Hofstadter</p>
+        <div class="stars">
+          ★★★★★
+        </div>
+        <div class="review">A guided tour through mathematics, art, music and the philosophy of mind. I only wish there were more books like this one.</div>
+      </div>
+
+      <figure>
+        <a href="https://www.amazon.com/dp/0385353308" target="_blank"><img alt="Cover image of Station Eleven by Emily St. John Mandel" title="Cover of Station Eleven" src="https://images.gr-assets.com/books/1451446835l/20170404.jpg" /></a>
+      </figure>
+      <div>
+        <h2 class="title"><a href="https://www.amazon.com/dp/0385353308" target="_blank">Station Eleven</a></h2>
+        <p class="author">by Emily St. John Mandel</p>
+        <div class="stars">
+          ★★★
+        </div>
+        <div class="review">Post-apocalyptic drama with some forgettable characters whose lives intertwine in forgettable ways.</div>
+      </div>
+
+      <figure>
+        <a href="https://www.amazon.com/dp/0465045669" target="_blank"><img alt="Cover image of Metamagical Themas: Questing for the Essence of Mind and Pattern by Douglas R. Hofstadter" title="Cover of Metamagical Themas: Questing for the Essence of Mind and Pattern" src="https://images.gr-assets.com/books/1386921379l/181239.jpg" /></a>
+      </figure>
+      <div>
+        <h2 class="title"><a href="https://www.amazon.com/dp/0465045669" target="_blank">Metamagical Themas: Questing for the Essence of Mind and Pattern</a></h2>
+        <p class="author">by Douglas R. Hofstadter</p>
+        <div class="stars">
+          ★★★★
+        </div>
+        <div class="review">Metamagical Themas is as good as this sentence says it is.</div>
+      </div>
+    </div>
+
+    <div class="grid covers">
+      <a class="book-cover-small" href="https://www.amazon.com/dp/0307341569" target="_blank"><img alt="Dark Places by Gillian Flynn" title="Dark Places by Gillian Flynn" src="https://images.gr-assets.com/books/1354988288l/5886881.jpg"></a>
+      <a class="book-cover-small" href="https://www.amazon.com/dp/0140283358" target="_blank"><img alt="Waiting for the Barbarians by J.M. Coetzee" title="Waiting for the Barbarians by J.M. Coetzee" src="https://images.gr-assets.com/books/1330879044l/6194.jpg"></a>
+      <a class="book-cover-small" href="https://www.amazon.com/s?k=Sharp%2BObjects&amp;tag=bbtl00-20" target="_blank"><img alt="Sharp Objects by Gillian Flynn" title="Sharp Objects by Gillian Flynn" src="https://images.gr-assets.com/books/1475695315l/18045891.jpg"></a>
+      <a class="book-cover-small" href="https://www.amazon.com/dp/0262193981" target="_blank"><img alt="Reinforcement Learning: An Introduction by Richard S. Sutton" title="Reinforcement Learning: An Introduction by Richard S. Sutton" src="https://images.gr-assets.com/books/1348086685l/739791.jpg"></a>
+      <a class="book-cover-small" href="https://www.amazon.com/dp/0571225373" target="_blank"><img alt="A Pale View of Hills by Kazuo Ishiguro" title="A Pale View of Hills by Kazuo Ishiguro" src="https://images.gr-assets.com/books/1348339374l/28920.jpg"></a>
+    </div>
+
+    <div class="grid">
+      <figure>
+        <a href="https://www.amazon.com/dp/0132733501//ef=nosim?tag=bbtl00-20" target="_blank"><img alt="Cover image of Neural Networks: A Comprehensive Foundation by Simon Haykin" title="Cover of Neural Networks: A Comprehensive Foundation" src="https://images.gr-assets.com/books/1555422533l/391008.jpg" /></a>
+      </figure>
+      <div>
+        <h2 class="title"><a href="https://www.amazon.com/dp/0132733501//ef=nosim?tag=bbtl00-20" target="_blank">Neural Networks: A Comprehensive Foundation</a></h2>
+        <p class="author">by Simon Haykin</p>
+        <div class="stars">
+          ★★★★★
+        </div>
+        <div class="review">A very theoretical approach to neural networks. I enjoyed it, but it requires at least an undergraduate degree level-understanding of mathematics. If you are a programmer who is simply NN-curious and this is the first book you pick up, God help you.</div>
+      </div>
+    </div>
+    <div style="height: 100px;"></div>
+{% endblock %}

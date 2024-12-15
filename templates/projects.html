@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block stylesheets %}
+<style>
+:root {
+  --pico-grid-column-gap: 2rem;
+  --pico-grid-row-gap: 40px;
+}
+.grid {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+.grid > div > p {
+ margin-top: 20px;
+}
+</style>
+{% endblock stylesheets %}
+
+{% block content %}
+<h1 class="page-heading">Projects</h1>
+<p>
+An incomplete list of some public side projects I have worked on over the years, just for fun.
+</p>
+<div class="grid">
+  <div>
+    <h2 class="subtitle">Best Borough</h2>
+    <img src="/images/bestborough.png" />
+    <p>Best Borough let you discover which areas of London fit you the best.</p>
+    <div class="links">Status: Discontinued</div>
+  </div>
+  <div>
+    <a href="https://goreportcard.com" title="Go Report Card website">
+      <h2 class="subtitle">Go Report Card</h2>
+      <img src="/images/goreportcard.png" />
+    </a>
+    <p>Go Report Card generates a report on the code quality of open source Go projects.</p>
+    <div class="links">[<a href="https://github.com/gojp/goreportcard">Source on Github</a>] | Status: Critical bugfixes only</div>
+  </div>
+
+  <div class="project-item">
+    <h2 class="subtitle">Nihongo.io</h2>
+    <img src="/images/nihongo.png" />
+    <p>A fast and simple open source Japanese dictionary written in Go.</p>
+    <div class="links">[<a href="https://github.com/gojp/nihongo">Source on GitHub</a>] | Status: Discontinued</div>
+  </div>
+  <div class="project-item">
+    <a href="https://github.com/gojp/kana" title="Kana Go Library">
+      <h2 class="subtitle">Kana</h2>
+      <img src="/images/kana.png" />
+    </a>
+    <p>A Go library to convert between Japanese Hiragana, Katakana and Romaji</p>
+    <div class="links">[<a href="https://github.com/gojp/kana">Source on GitHub</a>] | Status: Bugfixes only</div>
+  </div>
+
+  <div class="project-item">
+    <h2 class="subtitle">Chinese Level</h2>
+    <img src="/images/chineselevel.png" />
+    <p>A web app (2012-2016) for finding Chinese text to read at your level</p>
+    <div class="links">Status: Archived</div>
+  </div>
+  <div class="project-item">
+    <h2 class="subtitle">Planet Minibox</h2>
+    <img src="/images/planetminibox.jpg" />
+    <p>My first startup (2005-2009), providing hosted chatboxes that could be added via iframe.</p>
+    <div class="links">Status: Archived</div>
+  </div>
+
+  <div class="project-item">
+    <h2 class="subtitle">Chinese Flashcards</h2>
+    <img src="/images/hsk.gif" />
+    <p>A weekend hack with the main claim to fame that it was the first (non-Facebook) React Native app to be published to the app store.</p>
+    <div class="links">[<a href="/building-a-flashcard-app-with-react-native/">Read more</a>] | Status: Archived</div>
+  </div>
+  <div class="project-item">
+    <h2 class="subtitle">FlatSearch</h2>
+    <img src="/images/flatsearch.jpg" />
+    <p>A web app (2010-2012) for finding flats to let in student towns in South Africa.</p>
+    <div class="links">Status: Archived</div>
+  </div>
+</div>
+{% endblock %}

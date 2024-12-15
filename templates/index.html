@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+{% block stylesheets %}
+<style>
+.hero {
+  background: url("/images/hero.png") no-repeat center center;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  position: absolute;
+  top: 120px;
+  left: 20px;
+  right: 20px;
+  z-index: -1;
+}
+.hero-content {
+  max-width: 600px;
+}
+@media (min-width: 768px) {
+  .hero {
+    background-size: cover;
+    height: 700px;
+  }
+}
+.post-list {
+  padding: 10px 0 0;
+}
+.post-list-item {
+  margin: 30px 0 0;
+  border-top: 1px solid #e0e0e0;
+  padding-bottom: 20px;
+}
+.post-title {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  font-size: 30px;
+  margin: 50px 0 6px;
+}
+.post-summary {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  color: rgb(64, 64, 64);
+  margin: 0 0 10px;
+}
+.post-info {
+  color: #808080;
+  font-size: 18px;
+  font-style: italic;
+  margin: 0 0 10px;
+}
+.post-title a {
+  text-decoration: none;
+}
+.page-subheading {
+  margin: 290px 0 0;
+  font-size: 42px;
+  text-align: center;
+  font-family: Lora, "Times New Roman", serif;
+  font-weight: 300;
+  letter-spacing: -1px;
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.9);
+  color: black;
+}
+.content-inner {
+  background: white;
+  border-radius: 15px;
+  padding: 2em;
+  margin-top: 100px;
+}
+@media (max-width: 768px) {
+  .page-subheading {
+      margin: 0;
+  }
+  .content-inner {
+      margin-top: 0;
+      padding: 2em 0;
+  }
+}
+</style>
+{% endblock %}
+
+{% block hero %}
+
+<div class="container-fluid">
+  <div class="hero">
+    <div class="hero-content">
+    </div>
+  </div>
+</div>
+
+{% endblock hero %}
+
+{% block content %}
+<h2 class="page-subheading">Mostly software, books and lists of three things</h2>
+<div class="content-inner">
+  <aside class="me">
+      <p>I'm a long-time software engineer and manager, and I like to think and write about software, algorithms, and building great teams and products. I also like to talk about books sometimes. If this is your first time here, maybe you would like to dive straight in and read about <a href="/solving-regex-crosswords-using-go">an algorithm to solve regex crosswords</a>. Or if you like books, check out my controversial-on-hacker-news post <a href="/how-i-choose-nonfiction-books">3 Rules for Choosing Nonfiction Books</a>.</p>
+      <p>When not writing this blog, I work on <a href="https://cloudquery.io/" title="CloudQuery " target="_blank">CloudQuery, the open source ELT framework</a> for cloud infrastructure and security. Previously I worked on data pipelines as staff or principal software engineer at Fastly, Skyscanner, and Wayve.</p>
+      <p>You may also know about another open source project, <a href="https://goreportcard.com/" target="_blank" title="Go Report Card">Go Report Card</a>, that I started many years ago with my friend <a target="_blank" href="https://github.com/shawnps">Shawn Smith</a>. I wrote a lot about Go over the years, including an as-yet unfinished book, <a href="https://leanpub.com/productiongo">Production Go</a>.</p>
+  </aside>
+
+  {% set section = get_section(path="posts/_index.md") %}
+
+  <div class="post-list">
+    {% for page in section.pages | sort(attribute="date") | reverse %}
+    <section class="post-list-item">
+        <h1 class="post-title"><a href="{{ page.permalink | safe }}">{{ page.title }}</a></h1>
+        <div class="post-summary">
+            {{ page.description | safe }}
+        </div>
+        <div class="post-info">Posted on {{ page.date | date(format="%-d %B, %Y") }} | {{ page.reading_time }} min read</div>
+    </section>
+    {% endfor %}
+  </div>
+
+</div>
+{% endblock content %}
